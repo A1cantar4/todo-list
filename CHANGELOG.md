@@ -20,6 +20,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 - "test_todo.py" -> fixed the import and name of function.
+- "listas" to -> "listar" in menu of "todo_terminal.py."
 
 ### Changed
 - Modified README.md, new instructions about tests, added version, new center title and logo; and fixed correct height of screenshots.
@@ -30,7 +31,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Removed "-" to LICENSE.
 - Roved the Python files to "todo-list" folder.
 - Name of imports in all python files.
-- Modified name of python files in Readme
+- Modified name of python files in Readme and Contribuiting.
 
 ## [1.1.2] - 2025-07-23
 ### Added

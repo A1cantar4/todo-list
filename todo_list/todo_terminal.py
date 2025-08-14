@@ -6,7 +6,7 @@ todo_list = []
 def show_menu():
     print("\n¨¨¨¨ MENU PRINCIPAL ¨¨¨¨")
     print("1. Adicionar uma tarefa")
-    print("2. Listas as tarefas")
+    print("2. Listar as tarefas")
     print("3. Excluir uma tarefa")
     print("4. Sair")
 
