@@ -10,13 +10,17 @@
 
 This repository contains two Python-based to-do list applications, both with a user interface in **Portuguese** but code and commits in **English**, designed for learning and practical usage.
 
-## Screnshots
+---
 
-[!NOTE] todo-list Tkinter Version
-![screenshot](assets/img/screenshot-tkinter.png)
+## Screenshots
 
-[!NOTE] todo-list Terminal Version
-![screenshot](assets/img/screenshot-terminal.png)
+**Tkinter Version**
+![Tkinter Screenshot](assets/img/screenshot-tkinter.png)
+
+**Terminal Version**
+![Terminal Screenshot](assets/img/screenshot-terminal.png)
+
+---
 
 ## Project Structure
 
