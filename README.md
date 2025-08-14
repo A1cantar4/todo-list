@@ -13,10 +13,10 @@ This repository contains two Python-based to-do list applications, both with a u
 ## Screnshots
 
 > todo-list Tkinter Version
-![screenshot](https://raw.githubusercontent.com/A1cantar4/todo-list/refs/heads/master/assets/img/screenshot-tkinter.png)
+![screenshot](assets/img/screenshot-tkinter.png)
 
 > todo-list Terminal Version
-![screenshot](https://raw.githubusercontent.com/A1cantar4/todo-list/refs/heads/master/assets/img/screenshot-terminal.png)
+![screenshot](assets/img/screenshot-terminal.png)
 
 ## Project Structure
 

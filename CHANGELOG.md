@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - File "todo_core.py" (Function "Add" and "Remove" to tkinter and terminal python files) in "todo-list/".
 - Pytest with four tests in "tests/test_todo.py".
 - File "__init__".py -> tests/ and todo_list/.
+- requirements with pytest.
 
 ### Changed
 - Modified README.md, added version, new center title and logo.
