@@ -18,14 +18,19 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - File "__init__".py -> tests/ and todo_list/.
 - requirements with pytest.
 
+### Fixed
+- "test_todo.py" -> fixed the import and name of function.
+
 ### Changed
-- Modified README.md, added version, new center title and logo.
+- Modified README.md, new instructions about tests, added version, new center title and logo; and fixed correct height of screenshots.
 - In todo-list tkinter -> added version of program.
 - In todo-list tkinter -> refactored "task adding" and "removing" logic to support testing.
 - In todo-list terminal -> added version of program.
 - In todo-list terminal -> refactored "task adding" and "removing" logic to support testing.
 - Removed "-" to LICENSE.
 - Roved the Python files to "todo-list" folder.
+- Name of imports in all python files.
+- Modified name of python files in Readme
 
 ## [1.1.2] - 2025-07-23
 ### Added

@@ -25,8 +25,8 @@ git checkout -b feature-new-task
 - Keep **code and commit messages in English**  
 - Follow the existing **code style and folder structure**  
 - Test your changes on both:
-  - **Terminal version** (`todo_list_terminal.py`)
-  - **Tkinter GUI version** (`todo_list_tkinter_gui.py`)
+  - **Terminal version** (`todo_terminal.py`)
+  - **Tkinter GUI version** (`todo_tkinter.py`)
 
 ### 5. Commit Your Changes
 Write a clear and descriptive commit message:

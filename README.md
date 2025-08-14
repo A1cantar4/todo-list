@@ -8,7 +8,7 @@
   <h1>To-Do List Project (Terminal & GUI)</h1>
 </div>
 
-This repository contains two Python-based to-do list applications, both with a user interface in **Portuguese** but code and commits in **English**, designed for learning and practical usage.
+This repository contains two Python-based to-do list applications, both with a user interface in **Portuguese** but code and commits in **English**, designed for learning and practical usage. This project uses `pytest` for unit testing.
 
 ---
 
@@ -28,6 +28,7 @@ This repository contains two Python-based to-do list applications, both with a u
 todo-list/
 │
 ├── todo_list/
+|   ├── todo_core.py              # Add and Remove Functions to import
 │   ├── todo_terminal.py          # Terminal-based version (chat-style interface)
 │   └── todo_tkinter.py           # GUI version using Tkinter
 │
@@ -48,23 +49,27 @@ todo-list/
 
 ## Features
 
-### Terminal Version (`todo_list_terminal.py`)
+### Terminal Version (`todo_terminal.py`)
 - Add, list, and remove tasks via terminal
 - Clear input validation and error messages
 - Infinite menu loop until user exits
 
-### GUI Version (`todo_list_tkinter_gui.py`)
+### GUI Version (`todo_tkinter.py`)
 - Clean and minimal Tkinter interface
 - Add task via text input
 - Remove selected task from the list
 - Auto-refreshes task list when modified
+
+### Functions to import (`todo_core.py`)
+- Add and Remove task on list (tasks)
 
 ---
 
 ## Requirements
 
 - Python 3.x (recommended: 3.8+)
-- No external libraries needed (only built-in modules)
+- No external libraries needed to run the project (only built-in modules)
+- **pytest** (for running tests)
 
 ---
 
@@ -72,13 +77,29 @@ todo-list/
 
 ### Terminal version:
 ```bash
-python todo_list_terminal.py
+python todo_list/todo_terminal.py
 ```
 
 ### GUI version (Tkinter):
 ```bash
-python todo_list_tkinter_gui.py
+python todo_list/todo_tkinter.py
 ```
+
+---
+
+## How to Run Tests
+
+**1. Install pytest** (if you don’t have it yet):
+```bash
+pip install pytest
+```
+
+**2. Run the tests**:
+```bash
+pytest
+```
+
+Pytest will automatically discover tests inside the `tests/` directory and run them.
 
 ---
 

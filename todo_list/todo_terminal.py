@@ -1,4 +1,4 @@
-from todo_core import add_task, remove_task as core_add_task, core_remove_task
+from todo_core import add_task as core_add_task, remove_task as core_remove_task
 
 todo_list = []
 

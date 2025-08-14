@@ -1,5 +1,5 @@
 import pytest
-from todo_list.todo_core import add_task, remove_task as core_add_task, core_remove_task
+from todo_list.todo_core import add_task as core_add_task, remove_task as core_remove_task
 
 task_of_test1 = "Ir para academia!" # Variable to modify
 task_of_test2 = "Ler jornal"
@@ -12,7 +12,7 @@ def test_add_task_success():
 def test_add_task_empty_raises():
     tasks = []
     with pytest.raises(ValueError):
-        add_task(tasks, " ")
+        core_add_task(tasks, " ")
         
 def test_remove_task_success():
     tasks = [task_of_test1, task_of_test2]

@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from todo_core import add_task, remove_task as core_add_task, core_remove_task
+from todo_core import add_task as core_add_task, remove_task as core_remove_task
 
 # CREATE A TK WINDOW
 window = tk.Tk()
