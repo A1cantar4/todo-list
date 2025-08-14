@@ -1,15 +1,43 @@
+<div align="center">
+  <picture>
+    <img src="assets/img/logo.png" alt="Logo" width="80%">
+  </picture>
+</div>
 
-# To-Do List Project (Terminal & GUI)
+<div align="center">
+  <h1>To-Do List Project (Terminal & GUI)</h1>
+</div>
 
 This repository contains two Python-based to-do list applications, both with a user interface in **Portuguese** but code and commits in **English**, designed for learning and practical usage.
+
+## Screnshots
+
+> todo-list Tkinter Version
+![screenshot](https://raw.githubusercontent.com/A1cantar4/todo-list/refs/heads/master/assets/img/screenshot-tkinter.png)
+
+> todo-list Terminal Version
+![screenshot](https://raw.githubusercontent.com/A1cantar4/todo-list/refs/heads/master/assets/img/screenshot-terminal.png)
 
 ## Project Structure
 
 ```
-.
-├── todo_list_terminal.py       # Terminal-based version (chat-style interface)
-├── todo_list_tkinter_gui.py    # GUI version using Tkinter
-└── README.md                   # Project documentation
+todo-list/
+│
+├── todo_list/
+│   ├── todo_terminal.py          # Terminal-based version (chat-style interface)
+│   └── todo_tkinter.py           # GUI version using Tkinter
+│
+├── tests/
+│   └── test_todo.py              # Pytest
+│
+├── img/
+│    ├── logo.png                 # Logo for README
+│    ├── screenshot-terminal.png  # Terminal screenshot for Readme
+│    └── screenshot-tkinter.png   # Tkinter screenshot for Readme
+├── .gitignore                    # Simple gitignore
+├── CHANGELOG.md                  # All changes
+├── README.md                     # Project documentation
+
 ```
 
 ---
@@ -55,14 +83,18 @@ python todo_list_tkinter_gui.py
 - The interface language is **Portuguese**, but all code, commits, and documentation are in **English**.
 - You can expand this project by adding save/load features using JSON or text files.
 
----
-
-## Author
-
-Projeto criado por [A1cantar4](https://github.com/A1cantar4) — prática com projetos Python reais.
+![Versão](https://img.shields.io/badge/version-1.2.0-blue.svg)
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Author
+
+**Lucas Alcântara**  
+GitHub: [@A1cantar4](https://github.com/A1cantar4)

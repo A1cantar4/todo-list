@@ -1,5 +1,4 @@
-# Project: To-do List Terminal Chat Style
-# Version: 1.1.2 (English comments, Portuguese UI)
+from todo_core import add_task, remove_task as core_add_task, core_remove_task
 
 todo_list = []
 
@@ -15,7 +14,7 @@ def show_menu():
 def add_task():
     task = input("\nDigite sua nova tarefa: ").strip()
     if task:
-        todo_list.append(task)
+        core_add_task(todo_list, task) # New way to add task
         print("\nNova tarefa adicionada!")
     else:
         print("\nNão é possível adicionar tarefas vazias!")
@@ -36,13 +35,15 @@ def remove_task():
         return
     try:
         task_number = int(input("\nInforme qual tarefa você deseja remover da lista: "))
-        if 1 <= task_number <= len(todo_list):
-            removed = todo_list.pop(task_number - 1)  # Adjust for 0-based index
-            print(f"Tarefa {removed} removida com sucesso!")
-        else:
+        try:
+            core_remove_task(todo_list, task_number - 1) # New way remove task
+            print("\nTarefa removida com sucesso!")
+        except IndexError:
             print("\nNúmero de tarefa incorreto/inválido!")
     except ValueError:
         print("\nDigite um número válido por gentileza!")
+
+__version__ = "1.2.0"
 
 # Main loop to keep the program running
 while True:

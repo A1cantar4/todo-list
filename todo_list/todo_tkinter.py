@@ -1,10 +1,6 @@
-# PROJECT: TO-DO LIST with Tkinter Gui
-# LAST COMMIT: 23/07/2025 (ALL COMMITS IN ENGLISH)
-# VERSION: 1.1.1
-# FUNCTIONS: ADD and REMOVE tasks, and REFRESH Task List
-
-import tkinter as tk # FOR SIMPLIFY CODDING
+import tkinter as tk
 from tkinter import messagebox
+from todo_core import add_task, remove_task as core_add_task, core_remove_task
 
 # CREATE A TK WINDOW
 window = tk.Tk()
@@ -18,7 +14,7 @@ tasks = []
 def add_task():
     text = entry_task.get().strip()
     if text:
-        tasks.append(text)
+        core_add_task(tasks, text) # New add task
         refresh_list()
         entry_task.delete(0, tk.END)
     else:
@@ -29,8 +25,11 @@ def remove_task():
     selected = task_list.curselection()
     if selected:
         index = selected[0]
-        removed_tasks = tasks.pop(index)
-        refresh_list()
+        try: 
+            core_remove_task(tasks, index) # New remove
+            refresh_list()
+        except IndexError:
+            messagebox.showerror("Erro", "Índice inválido")
     else:
         messagebox.showinfo("Remover", "Selecione uma tarefa para remover por gentileza!")
 
@@ -52,6 +51,8 @@ task_list.pack(pady=10, padx=10, fill="both", expand=True)
 
 remove_button = tk.Button(window, text="Remover Selecionada", command=remove_task)
 remove_button.pack(pady=5)
+
+__version__ = "1.2.0"
 
 # START THE INTERFACE
 window.mainloop()
