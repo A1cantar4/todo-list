@@ -15,10 +15,10 @@ This repository contains two Python-based to-do list applications, both with a u
 ## Screenshots
 
 **Tkinter Version**
-<img src="assets/img/screenshot-tkinter.png" alt="Tkinter Screenshot" width="150px">
+<img src="assets/img/screenshot-tkinter.png" alt="Tkinter Screenshot" width="250px">
 
 **Terminal Version**
-<img src="assets/img/screenshot-terminal.png" alt="Terminal Screenshot" width="150px">
+<img src="assets/img/screenshot-terminal.png" alt="Terminal Screenshot" width="250px">
 
 ---
 
