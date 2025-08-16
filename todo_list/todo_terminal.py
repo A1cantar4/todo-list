@@ -1,32 +1,70 @@
 from todo_core import add_task as core_add_task, remove_task as core_remove_task
+from i18n import I18n
+from storage import Storage
 
-todo_list = []
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "settings"))
+from settings import Settings
+
+settings = Settings()
+
+# Function to select the language
+def choose_language():
+    base_path = os.path.join(os.path.dirname(__file__), "..", "settings", "locales")
+    files = [f[:-5] for f in os.listdir(base_path) if f.endswith(".json")]
+
+    print("\nEscolha o idioma / Choose your language:")
+    for i, lang in enumerate(files, start=1):
+        print(f"{i}. {lang}")
+
+    while True:
+        choice = input("\nDigite o número / Enter number: ").strip()
+        if choice.isdigit():
+            idx = int(choice)
+            if 1 <= idx <= len(files):
+                selected_lang = files[idx - 1]
+                settings.set("language", selected_lang)
+                return selected_lang
+        print("Opção inválida, tente novamente. / Invalid option, please try again.")
+
+# Ask for the language if it is not already saved
+if not settings.get("language"):
+    lang_choice = choose_language()
+else:
+    lang_choice = settings.get("language")
+
+i18n = I18n(lang_choice)
+storage = Storage()
+todo_list = storage.get_tasks()
 
 # Display the main menu
 def show_menu():
-    print("\n¨¨¨¨ MENU PRINCIPAL ¨¨¨¨")
-    print("1. Adicionar uma tarefa")
-    print("2. Listar as tarefas")
-    print("3. Excluir uma tarefa")
-    print("4. Sair")
+    print(f"\n{i18n.t('menu_title')}")
+    print(i18n.t("menu_add"))
+    print(i18n.t("menu_list"))
+    print(i18n.t("menu_remove"))
+    print(i18n.t("menu_change_lang")) # New option
+    print(i18n.t("menu_exit"))
 
 # Add a new task to the list
 def add_task():
-    task = input("\nDigite sua nova tarefa: ").strip()
+    task = input(f"\n{i18n.t('prompt_task')} ").strip()
     if task:
-        core_add_task(todo_list, task) # New way to add task
-        print("\nNova tarefa adicionada!")
+        core_add_task([], task) # New add
+        storage.add_task(task)
+        print(f"\n{i18n.t('task_added')}")
     else:
-        print("\nNão é possível adicionar tarefas vazias!")
+        print(f"\n{i18n.t('task_empty')}")
 
 # Show the current list of tasks
 def list_tasks():
-    if not todo_list:  # If the list is empty
-        print("\nNenhuma tarefa adicionada!")
+    todo_list[:] = storage.get_tasks()
+    if not todo_list:
+        print(f"\n{i18n.t('no_tasks')}")
     else:
-        print("\nA seguir, lista de tarefas:")
-        for i, task in enumerate(todo_list, start=1):  # Start numbering from 1
-            print(f"{i}. {task}")
+        print(f"\n{i18n.t('list_tasks')}")
+        for i, task in enumerate(todo_list, start=1):
+            print(f"{i}. {task['text']} (ID: {task['id']})")
 
 # Remove a task by its number
 def remove_task():
@@ -34,25 +72,35 @@ def remove_task():
     if not todo_list:
         return
     try:
-        task_number = int(input("\nInforme qual tarefa você deseja remover da lista: "))
-        try:
-            core_remove_task(todo_list, task_number - 1) # New way remove task
-            print("\nTarefa removida com sucesso!")
-        except IndexError:
-            print("\nNúmero de tarefa incorreto/inválido!")
+        task_number = int(input(f"\n{i18n.t('remove_prompt')} "))
+        if 1 <= task_number <= len(todo_list):
+            task_id = todo_list[task_number - 1]["id"]
+            storage.remove_task(task_id)
+            print(f"\n{i18n.t('remove_success')}")
+        else:
+            print(f"\n{i18n.t('remove_invalid')}")
     except ValueError:
-        print("\nDigite um número válido por gentileza!")
+        print(f"\n{i18n.t('remove_not_number')}")
 
-__version__ = "1.2.0"
+# New function: Define the language during the loop
+def change_language():
+    global i18n
+    lang_choice = choose_language()
+    i18n = I18n(lang_choice)
+    print(f"\n{i18n.t('language_changed')}")
+
+
+# Version
+__version__ = "2.0.0"
 
 # Main loop to keep the program running
 while True:
     show_menu()
-    choice = input("\nEscolha uma opção (1-4): ").strip()
+    choice = input(f"\n{i18n.t('choice')}").strip()
 
     if not choice:
-        print("\nVocê não digitou nada. Tente novamente.")
-        continue  # Go back to menu without crashing
+        print(f"\n{i18n.t('input_empty')}")
+        continue
 
     if choice == "1":
         add_task()
@@ -61,7 +109,9 @@ while True:
     elif choice == "3":
         remove_task()
     elif choice == "4":
-        print("\nAté a próxima, encerrando o programa...")
+        change_language()
+    elif choice == "5":
+        print(f"\n{i18n.t('bye')}")
         break
     else:
-        print("\nDigite uma opção válida (1, 2, 3 ou 4).")
+        print(f"\n{i18n.t('invalid_option')}")
