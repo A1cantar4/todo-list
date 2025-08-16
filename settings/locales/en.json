@@ -1,0 +1,50 @@
+{
+  "### Terminal Version ###": "Messages used in terminal version",
+
+  "menu_title": "¨¨¨¨ MAIN MENU ¨¨¨¨",
+  "menu_add": "1. Add a task",
+  "menu_list": "2. List tasks",
+  "menu_remove": "3. Remove a task",
+  "menu_change_lang": "4. Change language",
+  "menu_exit": "5. Exit",
+
+  "prompt_task": "Enter your new task:",
+  "task_added": "New task added!",
+  "task_empty": "Cannot add empty tasks!",
+  "no_tasks": "No tasks added!",
+  "list_tasks": "Here is your task list:",
+
+  "remove_prompt": "Enter which task you want to remove:",
+  "remove_success": "Task removed successfully!",
+  "remove_invalid": "Incorrect/invalid task number!",
+  "remove_not_number": "Please enter a valid number!",
+
+  "language_changed": "Language changed successfully!",
+  "choice": "Choose an option (1-4): ",
+  "input_empty": "You didn't type anything. Try again.",
+  "bye": "See you next time, closing program...",
+  "invalid_option": "Enter a valid option (1, 2, 3 or 4).",
+
+  "### Tkinter Version ###": "Messages used in Tkinter version",
+
+  "tk_window_title": "Task List",
+  "tk_add_button": "Add Task",
+  "tk_remove_button": "Remove Selected",
+  "tk_change_lang": "Change language",
+
+  "tk_warning_title": "Warning",
+  "tk_error_title": "Error",
+  "tk_info_title": "Information",
+  "tk_remove_task_error": "Task not found!",
+
+  "tk_warning_empty": "You need to enter a task!",
+  "tk_error_index": "Invalid index",
+  "tk_info_select_remove": "Please select a task to remove!",
+
+  "### Todo_core ###": "Used in Todo_core file",
+  "core_task_empty": "Task cannot be empty!",
+  "core_error_index": "Invalid index!",
+
+  "### Others ###": "Messages used in other parts of the system",
+  "storage_remove_task_error": "Task not found!"
+}

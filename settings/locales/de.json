@@ -1,0 +1,50 @@
+{
+  "### Terminal-Version ###": "Nachrichten, die in der Terminal-Version verwendet werden",
+
+  "menu_title": "¨¨¨¨ HAUPTMENÜ ¨¨¨¨",
+  "menu_add": "1. Aufgabe hinzufügen",
+  "menu_list": "2. Aufgaben auflisten",
+  "menu_remove": "3. Aufgabe löschen",
+  "menu_change_lang": "4. Sprache ändern",
+  "menu_exit": "5. Beenden",
+
+  "prompt_task": "Geben Sie Ihre neue Aufgabe ein:",
+  "task_added": "Neue Aufgabe hinzugefügt!",
+  "task_empty": "Leere Aufgaben können nicht hinzugefügt werden!",
+  "no_tasks": "Keine Aufgaben hinzugefügt!",
+  "list_tasks": "Hier ist Ihre Aufgabenliste:",
+
+  "remove_prompt": "Geben Sie an, welche Aufgabe Sie löschen möchten:",
+  "remove_success": "Aufgabe erfolgreich gelöscht!",
+  "remove_invalid": "Falsche/ungültige Aufgabennummer!",
+  "remove_not_number": "Bitte geben Sie eine gültige Zahl ein!",
+
+  "language_changed": "Sprache erfolgreich geändert!",
+  "choice": "Wählen Sie eine Option (1-4): ",
+  "input_empty": "Sie haben nichts eingegeben. Bitte erneut versuchen.",
+  "bye": "Bis zum nächsten Mal, Programm wird beendet...",
+  "invalid_option": "Bitte geben Sie eine gültige Option ein (1, 2, 3 oder 4).",
+
+  "### Tkinter-Version ###": "Nachrichten, die in der Tkinter-Version verwendet werden",
+
+  "tk_window_title": "Aufgabenliste",
+  "tk_add_button": "Aufgabe hinzufügen",
+  "tk_remove_button": "Ausgewählte löschen",
+  "tk_change_lang": "Sprache ändern",
+
+  "tk_warning_title": "Warnung",
+  "tk_error_title": "Fehler",
+  "tk_info_title": "Information",
+  "tk_remove_task_error": "Aufgabe nicht gefunden!",
+
+  "tk_warning_empty": "Bitte geben Sie eine Aufgabe ein!",
+  "tk_error_index": "Ungültiger Index",
+  "tk_info_select_remove": "Bitte wählen Sie eine Aufgabe zum Löschen aus!",
+
+  "### Todo_core ###": "Verwendet in der Datei Todo_core",
+  "core_task_empty": "Aufgabe darf nicht leer sein!",
+  "core_error_index": "Ungültiger Index!",
+
+  "### Andere ###": "Nachrichten, die in anderen Teilen des Systems verwendet werden",
+  "storage_remove_task_error": "Aufgabe nicht gefunden!"
+}

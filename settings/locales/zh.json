@@ -1,0 +1,50 @@
+{
+  "### 终端版本 ###": "终端版本中使用的消息",
+
+  "menu_title": "¨¨¨¨ 主菜单 ¨¨¨¨",
+  "menu_add": "1. 添加任务",
+  "menu_list": "2. 列出任务",
+  "menu_remove": "3. 删除任务",
+  "menu_change_lang": "4. 更改语言",
+  "menu_exit": "5. 退出",
+
+  "prompt_task": "请输入新任务：",
+  "task_added": "新任务已添加！",
+  "task_empty": "不能添加空任务！",
+  "no_tasks": "没有添加任务！",
+  "list_tasks": "以下是任务列表：",
+
+  "remove_prompt": "请输入要删除的任务编号：",
+  "remove_success": "任务已成功删除！",
+  "remove_invalid": "任务编号错误或无效！",
+  "remove_not_number": "请输入有效的数字！",
+
+  "language_changed": "语言切换成功！",
+  "choice": "请选择一个选项 (1-4)：",
+  "input_empty": "您没有输入任何内容，请重试。",
+  "bye": "下次见，程序正在关闭...",
+  "invalid_option": "请输入有效选项 (1, 2, 3 或 4)。",
+
+  "### Tkinter 版本 ###": "Tkinter版本中使用的消息",
+
+  "tk_window_title": "任务列表",
+  "tk_add_button": "添加任务",
+  "tk_remove_button": "删除所选",
+  "tk_change_lang": "更改语言",
+
+  "tk_warning_title": "警告",
+  "tk_error_title": "错误",
+  "tk_info_title": "信息",
+  "tk_remove_task_error": "未找到任务！",
+
+  "tk_warning_empty": "需要输入任务！",
+  "tk_error_index": "索引无效",
+  "tk_info_select_remove": "请先选择要删除的任务！",
+
+  "### Todo_core ###": "用于 Todo_core 文件",
+  "core_task_empty": "任务不能为空！",
+  "core_error_index": "索引无效！",
+
+  "### 其他 ###": "系统其他部分使用的消息",
+  "storage_remove_task_error": "未找到任务！"
+}

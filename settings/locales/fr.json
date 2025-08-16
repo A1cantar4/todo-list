@@ -1,0 +1,50 @@
+{
+  "### Version Terminal ###": "Messages utilisés dans la version terminal",
+
+  "menu_title": "¨¨¨¨ MENU PRINCIPAL ¨¨¨¨",
+  "menu_add": "1. Ajouter une tâche",
+  "menu_list": "2. Lister les tâches",
+  "menu_remove": "3. Supprimer une tâche",
+  "menu_change_lang": "4. Changer la langue",
+  "menu_exit": "5. Quitter",
+
+  "prompt_task": "Entrez votre nouvelle tâche :",
+  "task_added": "Nouvelle tâche ajoutée !",
+  "task_empty": "Impossible d’ajouter une tâche vide !",
+  "no_tasks": "Aucune tâche ajoutée !",
+  "list_tasks": "Voici la liste des tâches :",
+
+  "remove_prompt": "Indiquez quelle tâche vous souhaitez supprimer :",
+  "remove_success": "Tâche supprimée avec succès !",
+  "remove_invalid": "Numéro de tâche incorrect/invalide !",
+  "remove_not_number": "Veuillez entrer un nombre valide !",
+
+  "language_changed": "Langue changée avec succès !",
+  "choice": "Choisissez une option (1-4) : ",
+  "input_empty": "Vous n’avez rien tapé. Réessayez.",
+  "bye": "À la prochaine, fermeture du programme...",
+  "invalid_option": "Entrez une option valide (1, 2, 3 ou 4).",
+
+  "### Version Tkinter ###": "Messages utilisés dans la version Tkinter",
+
+  "tk_window_title": "Liste de Tâches",
+  "tk_add_button": "Ajouter Tâche",
+  "tk_remove_button": "Supprimer la Sélection",
+  "tk_change_lang": "Changer la langue",
+
+  "tk_warning_title": "Attention",
+  "tk_error_title": "Erreur",
+  "tk_info_title": "Information",
+  "tk_remove_task_error": "Tâche introuvable !",
+
+  "tk_warning_empty": "Vous devez entrer une tâche !",
+  "tk_error_index": "Index invalide",
+  "tk_info_select_remove": "Veuillez sélectionner une tâche à supprimer !",
+
+  "### Todo_core ###": "Utilisé dans le fichier Todo_core",
+  "core_task_empty": "La tâche ne peut pas être vide !",
+  "core_error_index": "Index invalide !",
+
+  "### Autres ###": "Messages utilisés dans d’autres parties du système",
+  "storage_remove_task_error": "Tâche introuvable !"
+}

@@ -1,0 +1,50 @@
+{
+  "### Versão Terminal ###": "Mensagens usadas na versão de terminal",
+
+  "menu_title": "¨¨¨¨ MENU PRINCIPAL ¨¨¨¨",
+  "menu_add": "1. Adicionar uma tarefa",
+  "menu_list": "2. Listar as tarefas",
+  "menu_remove": "3. Excluir uma tarefa",
+  "menu_change_lang": "4. Alterar idioma",
+  "menu_exit": "5. Sair",
+
+  "prompt_task": "Digite sua nova tarefa:",
+  "task_added": "Nova tarefa adicionada!",
+  "task_empty": "Não é possível adicionar tarefas vazias!",
+  "no_tasks": "Nenhuma tarefa adicionada!",
+  "list_tasks": "A seguir, lista de tarefas:",
+
+  "remove_prompt": "Informe qual tarefa você deseja remover da lista:",
+  "remove_success": "Tarefa removida com sucesso!",
+  "remove_invalid": "Número de tarefa incorreto/inválido!",
+  "remove_not_number": "Digite um número válido por gentileza!",
+
+  "language_changed" : "Idioma alterado com sucesso!",
+  "choice" : "Escolha uma opção (1-4): ",
+  "input_empty": "Você não digitou nada. Tente novamente.",
+  "bye": "Até a próxima, encerrando o programa...",
+  "invalid_option": "Digite uma opção válida (1, 2, 3 ou 4).",
+
+  "### Versão Tkinter ###": "Mensagens usadas na versão com Tkinter",
+
+  "tk_window_title": "Lista de Tarefas",
+  "tk_add_button": "Adicionar Tarefa",
+  "tk_remove_button": "Remover Selecionada",
+  "tk_change_lang" : "Alterar idioma",
+
+  "tk_warning_title": "Atenção",
+  "tk_error_title": "Erro",
+  "tk_info_title": "Informação",
+  "tk_remove_task_error": "Tarefa não encontrada!",
+
+  "tk_warning_empty": "Necessita digitar uma tarefa!",
+  "tk_error_index": "Índice inválido",
+  "tk_info_select_remove": "Selecione uma tarefa para remover por gentileza!",
+
+  "### Todo_core ###" : "Usado no arquivo Todo_core",
+  "core_task_empty" : "A tarefa não pode ser vazia!",
+  "core_error_index" : "Índice invalido!",
+
+  "### Outros ###": "Mensagens usadas em outras partes do sistema",
+  "storage_remove_task_error": "Tarefa não encontrada!"
+}
