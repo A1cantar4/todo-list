@@ -1,3 +1,16 @@
 {
-    "tasks": []
+    "tasks": [
+        {
+            "id": 1,
+            "text": "Comprar sapatos novos"
+        },
+        {
+            "id": 2,
+            "text": "Passear com meu pet"
+        },
+        {
+            "id": 3,
+            "text": "Arrumar meu quarto"
+        }
+    ]
 }
