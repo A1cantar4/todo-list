@@ -6,6 +6,20 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.0.0] - 2025-08-15
+### Added
+- Support for 11 languages (ar, bn, de, en, es, fr, hi, pt, ru, ur, zh).
+- Persistent language configuration via `settings.json`.
+- `tasks.json` now stores all tasks persistently.
+- New `i18n.py` module for loading translation files.
+- New `storage.py` module for managing tasks with IDs.
+- Added `locales/` folder with JSON translation files.
+- Task IDs for better management and deletion.
+- Internationalization support integrated in `todo_core`.
+
+### Changed
+- Updated `README.md` with i18n information and database(json).
+
 ## [1.2.0] - 2025-08-13
 ### Added
 - This CHANGELOG.md.
