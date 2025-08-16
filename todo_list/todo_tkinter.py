@@ -10,18 +10,18 @@ from settings import Settings
 
 settings = Settings()
 
-# NEW FUNCTION: CHOOSE LANGUAGE DURING START OF LOOP
+# LANGUAGE SELECTION WINDOW
 def choose_language():
     base_path = os.path.join(os.path.dirname(__file__), "..", "settings", "locales")
     files = [f[:-5] for f in os.listdir(base_path) if f.endswith(".json")]
 
-    lang_window = tk.Tk()
+    lang_window = tk.Toplevel(window)
     lang_window.title("Select Language")
 
     tk.Label(lang_window, text="Escolha o idioma / Choose your language").pack(pady=10)
 
     selected_lang = tk.StringVar(lang_window)
-    selected_lang.set(files[0])
+    selected_lang.set(settings.get("language", files[0]))
 
     tk.OptionMenu(lang_window, selected_lang, *files).pack(pady=5)
 
@@ -30,32 +30,31 @@ def choose_language():
         lang_window.destroy()
 
     tk.Button(lang_window, text="OK", command=confirm).pack(pady=10)
-    lang_window.mainloop()
+
+    # Wait until the selection window be closed
+    lang_window.grab_set()
+    window.wait_window(lang_window)
 
     return settings.get("language")
 
-# ASK FOR THE LANGUAGE IF IT IS NOT ALREADY SAVED
-if not settings.get("language"):
-    lang_choice = choose_language()
-else:
-    lang_choice = settings.get("language")
+# UPDATE UI TEXTS
+def update_texts():
+    window.title(i18n.t("tk_window_title"))
+    add_button.config(text=i18n.t("tk_add_button"))
+    remove_button.config(text=i18n.t("tk_remove_button"))
+    lang_button.config(text=i18n.t("tk_change_lang"))
 
-i18n = I18n(lang_choice)
-storage = Storage()
-tasks = storage.get_tasks()
-
-# ADD TASKS ON LIST
+# TASK MANAGEMENT
 def add_task():
     text = entry_task.get().strip()
     if text:
-        core_add_task([], text) # New add task
+        core_add_task([], text)
         storage.add_task(text) 
         refresh_list()
         entry_task.delete(0, tk.END)
     else:
-        messagebox.showwarning(i18n.t("tk_warning_title"), i18n.t("tk_warning_empty")) # WHEN SOMETHING IS TYPED WRONG
+        messagebox.showwarning(i18n.t("tk_warning_title"), i18n.t("tk_warning_empty"))
 
-# REMOVE TASKS, BUT YOU NEED TO SELECT A TASK FIRST
 def remove_task():
     selected = task_list.curselection()
     if selected:
@@ -69,30 +68,35 @@ def remove_task():
     else:
         messagebox.showinfo(i18n.t("tk_info_title"), i18n.t("tk_info_select_remove"))
 
-# REFRESH TASK LIST AND SHOW ALL TASKS ADDED
 def refresh_list():
     global tasks
     tasks = storage.get_tasks()
     task_list.delete(0, tk.END)
     for task in tasks:
         task_list.insert(tk.END, f"{task['text']} (ID: {task['id']})")
-        
-# NEW FUNCTION: DEFINE THE LANGUAGE DURING THE LOOP 
+
+# LANGUAGE SWITCH
 def change_language():
     lang_choice = choose_language()
     global i18n
     i18n = I18n(lang_choice)
-    window.title(i18n.t("tk_window_title"))
-    add_button.config(text=i18n.t("tk_add_button"))
-    remove_button.config(text=i18n.t("tk_remove_button"))
-    lang_button.config(text=i18n.t("tk_change_lang"))
+    update_texts()
     refresh_list()
 
-# CREATE A TK WINDOW
+# MAIN WINDOW
 window = tk.Tk()
-window.title(i18n.t("tk_window_title"))
 window.geometry("400x400")
-        
+
+# If not have language saved, ask
+if not settings.get("language"):
+    lang_choice = choose_language()
+else:
+    lang_choice = settings.get("language")
+
+i18n = I18n(lang_choice)
+storage = Storage()
+tasks = storage.get_tasks()
+
 # WIDGETS
 entry_task = tk.Entry(window, font=("Arial", 14))
 entry_task.pack(pady=10, padx=10, fill="x")
@@ -110,8 +114,9 @@ lang_button = tk.Button(window, text=i18n.t("tk_change_lang"), command=change_la
 lang_button.pack(pady=5)
 
 # VERSION
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 
-# START THE INTERFACE
+# START
+update_texts()
 refresh_list()
 window.mainloop()

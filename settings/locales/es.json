@@ -23,7 +23,7 @@
   "choice": "Elija una opción (1-4): ",
   "input_empty": "No escribió nada. Intente nuevamente.",
   "bye": "Hasta la próxima, cerrando el programa...",
-  "invalid_option": "Ingrese una opción válida (1, 2, 3 o 4).",
+  "invalid_option": "Ingrese una opción válida (1, 2, 3, 4 o 5).",
 
   "### Versión Tkinter ###": "Mensajes usados en la versión Tkinter",
 

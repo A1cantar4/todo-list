@@ -91,7 +91,7 @@ def change_language():
 
 
 # Version
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 
 # Main loop to keep the program running
 while True:

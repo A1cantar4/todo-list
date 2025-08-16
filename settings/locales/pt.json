@@ -20,10 +20,10 @@
   "remove_not_number": "Digite um número válido por gentileza!",
 
   "language_changed" : "Idioma alterado com sucesso!",
-  "choice" : "Escolha uma opção (1-4): ",
+  "choice" : "Escolha uma opção (1-5): ",
   "input_empty": "Você não digitou nada. Tente novamente.",
   "bye": "Até a próxima, encerrando o programa...",
-  "invalid_option": "Digite uma opção válida (1, 2, 3 ou 4).",
+  "invalid_option": "Digite uma opção válida (1, 2, 3, 4 ou 5).",
 
   "### Versão Tkinter ###": "Mensagens usadas na versão com Tkinter",
 

@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.0.1] - 2025-08-16
+### Changed
+- Altered the logic of todo_tkinter, to support switch language in real time.
+
+### Fixed
+- Now, when you change the language, the app will switch the texts automatically.
+- In Terminal Menu (all languagens) "1-4" now is "1-5".
+
 ## [2.0.0] - 2025-08-15
 ### Added
 - Support for 11 languages (ar, bn, de, en, es, fr, hi, pt, ru, ur, zh).

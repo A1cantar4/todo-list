@@ -20,10 +20,10 @@
   "remove_not_number": "Bitte geben Sie eine gültige Zahl ein!",
 
   "language_changed": "Sprache erfolgreich geändert!",
-  "choice": "Wählen Sie eine Option (1-4): ",
+  "choice": "Wählen Sie eine Option (1-5): ",
   "input_empty": "Sie haben nichts eingegeben. Bitte erneut versuchen.",
   "bye": "Bis zum nächsten Mal, Programm wird beendet...",
-  "invalid_option": "Bitte geben Sie eine gültige Option ein (1, 2, 3 oder 4).",
+  "invalid_option": "Bitte geben Sie eine gültige Option ein (1, 2, 3, 4 oder 5).",
 
   "### Tkinter-Version ###": "Nachrichten, die in der Tkinter-Version verwendet werden",
 

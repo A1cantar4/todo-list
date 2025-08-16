@@ -154,7 +154,7 @@ Pytest will automatically discover tests inside the `tests/` directory and run t
 
 ## Notes
 
-![Versão](https://img.shields.io/badge/version-2.0.0-blue.svg)
+![Versão](https://img.shields.io/badge/version-2.0.1-blue.svg)
 ![i18n](https://img.shields.io/badge/i18n-11_languages-green.svg)
 
 ---
